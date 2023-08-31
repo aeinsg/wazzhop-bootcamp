@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 64);
             $table->longtext('description');
             $table->string('extension', 64);
-            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('category_id')->nullable();
 
             $table->foreign("category_id")->references("id")->on("categories"); //self join
         });

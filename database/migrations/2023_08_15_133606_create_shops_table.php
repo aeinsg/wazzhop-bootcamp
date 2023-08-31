@@ -15,7 +15,7 @@ return new class extends Migration
             $table->unsignedBigInteger("user_id")->primary();
             $table->string('name', 64);
             $table->longtext('desription', 300);
-            $table->string('social', 64);
+            $table->string('social', 64)->nullable();
             $table->string('extension', 64);
             
 
